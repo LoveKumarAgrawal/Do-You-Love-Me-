@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="container">
+            <div class="card frontface">
+                <h3>Do You Love Me?</h3>
+                <div id="btns">
+                <button class="btn" id="yes">Yes</button>
+                <button class="btn" id="no">No</button>
+            </div>
+            </div>
+            <div class="card backface">
+                <h3>I Love You Too.</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        let yes = document.getElementById('yes');
+        let no = document.getElementById('no');
+        let container = document.querySelector('#container');
+        no.addEventListener('mouseover',()=>{
+            no.style.left = Math.floor(Math.random() * 450) + "px";
+            no.style.top = Math.floor(Math.random() * 100) + "px";  
+        })
+        yes.addEventListener('click',() => {
+            container.style.transform = "rotateY(180deg)";
+            container.style.transformStyle = "preserve-3d";
+        })
+    </script>
+</body>
+</html>
